@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A4DCF0E2C5C268F0023F4A4 /* TicTacToe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4DCF0D2C5C268F0023F4A4 /* TicTacToe.swift */; };
+		5A4DCF102C5C26CE0023F4A4 /* TicTacToeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4DCF0F2C5C26CE0023F4A4 /* TicTacToeGame.swift */; };
 		5A885FA32C5C1AD500E618AE /* tic_tac_toeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A885FA22C5C1AD500E618AE /* tic_tac_toeApp.swift */; };
 		5A885FA52C5C1AD500E618AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A885FA42C5C1AD500E618AE /* ContentView.swift */; };
 		5A885FA72C5C1AD600E618AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A885FA62C5C1AD600E618AE /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A4DCF0D2C5C268F0023F4A4 /* TicTacToe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToe.swift; sourceTree = "<group>"; };
+		5A4DCF0F2C5C26CE0023F4A4 /* TicTacToeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeGame.swift; sourceTree = "<group>"; };
 		5A885F9F2C5C1AD500E618AE /* tic-tac-toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tic-tac-toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A885FA22C5C1AD500E618AE /* tic_tac_toeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tic_tac_toeApp.swift; sourceTree = "<group>"; };
 		5A885FA42C5C1AD500E618AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +48,7 @@
 		5A885FB92C5C1AD600E618AE /* tic-tac-toeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tic-tac-toeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A885FBD2C5C1AD600E618AE /* tic_tac_toeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tic_tac_toeUITests.swift; sourceTree = "<group>"; };
 		5A885FBF2C5C1AD600E618AE /* tic_tac_toeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tic_tac_toeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5A885FCC2C5C1EBE00E618AE /* tic-tac-toe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "tic-tac-toe.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +99,13 @@
 		5A885FA12C5C1AD500E618AE /* tic-tac-toe */ = {
 			isa = PBXGroup;
 			children = (
+				5A885FCC2C5C1EBE00E618AE /* tic-tac-toe.entitlements */,
 				5A885FA22C5C1AD500E618AE /* tic_tac_toeApp.swift */,
 				5A885FA42C5C1AD500E618AE /* ContentView.swift */,
 				5A885FA62C5C1AD600E618AE /* Assets.xcassets */,
 				5A885FA82C5C1AD600E618AE /* Preview Content */,
+				5A4DCF0D2C5C268F0023F4A4 /* TicTacToe.swift */,
+				5A4DCF0F2C5C26CE0023F4A4 /* TicTacToeGame.swift */,
 			);
 			path = "tic-tac-toe";
 			sourceTree = "<group>";
@@ -257,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A4DCF102C5C26CE0023F4A4 /* TicTacToeGame.swift in Sources */,
 				5A885FA52C5C1AD500E618AE /* ContentView.swift in Sources */,
+				5A4DCF0E2C5C268F0023F4A4 /* TicTacToe.swift in Sources */,
 				5A885FA32C5C1AD500E618AE /* tic_tac_toeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,7 +357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -404,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -419,10 +429,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "tic-tac-toe/tic-tac-toe.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tic-tac-toe/Preview Content\"";
-				DEVELOPMENT_TEAM = G63J7HW34Q;
+				DEVELOPMENT_TEAM = 35XWJ6BAZW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -430,16 +441,18 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rockarts.tic-tac-toe";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rockarts.tic-tac-toe-game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 17.4;
 			};
 			name = Debug;
 		};
@@ -448,10 +461,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "tic-tac-toe/tic-tac-toe.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tic-tac-toe/Preview Content\"";
-				DEVELOPMENT_TEAM = G63J7HW34Q;
+				DEVELOPMENT_TEAM = 35XWJ6BAZW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -459,16 +473,18 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rockarts.tic-tac-toe";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rockarts.tic-tac-toe-game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 17.4;
 			};
 			name = Release;
 		};
@@ -481,7 +497,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G63J7HW34Q;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rockarts.tic-tac-toeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -489,6 +505,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tic-tac-toe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/tic-tac-toe";
+				TVOS_DEPLOYMENT_TARGET = 17.4;
 			};
 			name = Debug;
 		};
@@ -501,7 +518,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G63J7HW34Q;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rockarts.tic-tac-toeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -509,6 +526,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tic-tac-toe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/tic-tac-toe";
+				TVOS_DEPLOYMENT_TARGET = 17.4;
 			};
 			name = Release;
 		};
@@ -520,6 +538,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G63J7HW34Q;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rockarts.tic-tac-toeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -527,6 +546,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "tic-tac-toe";
+				TVOS_DEPLOYMENT_TARGET = 17.4;
 			};
 			name = Debug;
 		};
@@ -538,6 +558,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G63J7HW34Q;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rockarts.tic-tac-toeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -545,6 +566,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "tic-tac-toe";
+				TVOS_DEPLOYMENT_TARGET = 17.4;
 			};
 			name = Release;
 		};

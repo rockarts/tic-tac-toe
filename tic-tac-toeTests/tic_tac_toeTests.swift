@@ -18,19 +18,60 @@ final class tic_tac_toeTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testShouldCreateAnEmptyBoard() {
+        let ticTacToe = TicTacToe()
+        XCTAssertEqual(ticTacToe.isEmpty(), true)
+        ticTacToe.printBoard()
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testCurrentPlayerShouldBeAbleToMakeAMove() {
+        let ticTacToe = TicTacToe()
+        ticTacToe.makeMove(at: (0,0))
+        XCTAssertEqual(ticTacToe.isEmpty(), false)
+        ticTacToe.printBoard()
     }
-
+    
+    func testCheckForAWinInARow() {
+        let ticTacToe = TicTacToe()
+        ticTacToe.makeMove(at: (0,0))
+        ticTacToe.makeMove(at: (1,0))
+        ticTacToe.makeMove(at: (2,0))
+        ticTacToe.printBoard()
+        
+        ticTacToe.checkWinner()
+        XCTAssert(ticTacToe.winner == .x)
+    }
+    
+    func testCheckForAWinInAColumn() {
+        let ticTacToe = TicTacToe()
+        ticTacToe.makeMove(at: (0,0))
+        ticTacToe.makeMove(at: (0,1))
+        ticTacToe.makeMove(at: (0,2))
+        ticTacToe.printBoard()
+        
+        ticTacToe.checkWinner()
+        XCTAssert(ticTacToe.winner == .x)
+    }
+    
+    func testCheckForAWinInADiagonal() {
+        let ticTacToe = TicTacToe()
+        ticTacToe.makeMove(at: (0,0))
+        ticTacToe.makeMove(at: (1,1))
+        ticTacToe.makeMove(at: (2,2))
+        ticTacToe.printBoard()
+        
+        ticTacToe.checkWinner()
+        XCTAssert(ticTacToe.winner == .x)
+    }
+    
+    func testCheckForAWinInAReverseDiagonal() {
+        let ticTacToe = TicTacToe()
+        ticTacToe.makeMove(at: (0,2))
+        ticTacToe.makeMove(at: (1,1))
+        ticTacToe.makeMove(at: (2,0))
+        ticTacToe.printBoard()
+        
+        ticTacToe.checkWinner()
+        XCTAssert(ticTacToe.winner == .x)
+    }
 }
