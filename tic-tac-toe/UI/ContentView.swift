@@ -13,15 +13,7 @@ struct ContentView: View {
     var body: some View {
         ScrollView {
             VStack {
-                VStack {
-                    Text("Score: X \(game.scoreboard.xWins) wins")
-                    Text("Score: O \(game.scoreboard.oWins) wins")
-                    Text("Score: \(game.scoreboard.ties) ties")
-                    Button("Reset Scores") {
-                        game.scoreboard.resetScores()
-                    }
-                    .padding()
-                }
+                ScoreboardView(scoreboard: game.scoreboard)
                 Text("Current Player: \(game.currentPlayer)")
                     .font(.title)
                     .padding()
@@ -30,9 +22,9 @@ struct ContentView: View {
                     .font(.title)
                     .padding()
                 
-                ForEach(0..<TicTacToe.boardSize) { row in
+                ForEach(0..<TicTacToe.boardSize, id: \.self) { row in
                     HStack {
-                        ForEach(0..<TicTacToe.boardSize) { col in
+                        ForEach(0..<TicTacToe.boardSize, id: \.self) { col in
                             Button(action: {
                                 print("\(row), \(col)")
                                 game.turn(at: (col, row))
