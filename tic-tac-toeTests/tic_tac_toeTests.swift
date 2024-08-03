@@ -75,4 +75,15 @@ final class tic_tac_toeTests: XCTestCase {
         ticTacToe.checkWinner()
         XCTAssert(ticTacToe.winner == .x)
     }
+    
+    func testShouldNotAllowAMoveInATakenSpot() {
+        let ticTacToe = TicTacToe()
+        XCTAssert(ticTacToe.currentPlayer == .x)
+        ticTacToe.turn(at: (0,0))
+        XCTAssert(ticTacToe.currentPlayer == .o)
+        ticTacToe.turn(at: (0,0))
+        XCTAssert(ticTacToe.currentPlayer == .o)
+        let space = ticTacToe.board[0][0]
+        XCTAssert(space == State.x)
+    }
 }
