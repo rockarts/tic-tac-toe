@@ -26,16 +26,17 @@ final class tic_tac_toeTests: XCTestCase {
     
     func testCurrentPlayerShouldBeAbleToMakeAMove() {
         let ticTacToe = TicTacToe()
-        ticTacToe.makeMove(at: (0,0))
+        let result = ticTacToe.makeMove(at: (0,0))
         XCTAssertEqual(ticTacToe.isEmpty(), false)
+        XCTAssert(result)
         ticTacToe.printBoard()
     }
     
     func testCheckForAWinInARow() {
         let ticTacToe = TicTacToe()
-        ticTacToe.makeMove(at: (0,0))
-        ticTacToe.makeMove(at: (1,0))
-        ticTacToe.makeMove(at: (2,0))
+        _ = ticTacToe.makeMove(at: (0,0))
+        _ = ticTacToe.makeMove(at: (1,0))
+        _ = ticTacToe.makeMove(at: (2,0))
         ticTacToe.printBoard()
         
         ticTacToe.checkWinner()
@@ -44,9 +45,9 @@ final class tic_tac_toeTests: XCTestCase {
     
     func testCheckForAWinInAColumn() {
         let ticTacToe = TicTacToe()
-        ticTacToe.makeMove(at: (0,0))
-        ticTacToe.makeMove(at: (0,1))
-        ticTacToe.makeMove(at: (0,2))
+        _ = ticTacToe.makeMove(at: (0,0))
+        _ = ticTacToe.makeMove(at: (0,1))
+        _ = ticTacToe.makeMove(at: (0,2))
         ticTacToe.printBoard()
         
         ticTacToe.checkWinner()
@@ -55,9 +56,9 @@ final class tic_tac_toeTests: XCTestCase {
     
     func testCheckForAWinInADiagonal() {
         let ticTacToe = TicTacToe()
-        ticTacToe.makeMove(at: (0,0))
-        ticTacToe.makeMove(at: (1,1))
-        ticTacToe.makeMove(at: (2,2))
+        _ = ticTacToe.makeMove(at: (0,0))
+        _ = ticTacToe.makeMove(at: (1,1))
+        _ = ticTacToe.makeMove(at: (2,2))
         ticTacToe.printBoard()
         
         ticTacToe.checkWinner()
@@ -66,9 +67,9 @@ final class tic_tac_toeTests: XCTestCase {
     
     func testCheckForAWinInAReverseDiagonal() {
         let ticTacToe = TicTacToe()
-        ticTacToe.makeMove(at: (0,2))
-        ticTacToe.makeMove(at: (1,1))
-        ticTacToe.makeMove(at: (2,0))
+        _ = ticTacToe.makeMove(at: (0,2))
+        _ = ticTacToe.makeMove(at: (1,1))
+        _ = ticTacToe.makeMove(at: (2,0))
         ticTacToe.printBoard()
         
         ticTacToe.checkWinner()
