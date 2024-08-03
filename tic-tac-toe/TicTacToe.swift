@@ -36,6 +36,13 @@ class TicTacToe: ObservableObject {
     @Published var board: [[State]] = Array(repeating: Array(repeating: .empty, count: boardSize), count: boardSize)
     @Published var currentPlayer: State = .x
     @Published var winner: Winner = .none
+    @Published var isGameOver: Bool = false
+    
+    @Published var scoreboard: Scoreboard
+    
+    init(scoreboard: Scoreboard = Scoreboard()) {
+        self.scoreboard = scoreboard
+    }
     
     private static let lines: [[Int]] = {
         let size = boardSize
@@ -79,11 +86,13 @@ class TicTacToe: ObservableObject {
         }
     }
     
-    func turn(at position: (Int, Int)){
+    func turn(at position: (Int, Int)) {
+        guard !isGameOver else { return }
+        
         let successful = makeMove(at: position)
         if successful {
             togglePlayer()
-            checkWinner()
+            checkGameOver()
         }
     }
     
@@ -118,5 +127,28 @@ class TicTacToe: ObservableObject {
                 winner = .none
             }
         }
+    }
+    
+    private func checkGameOver() {
+        checkWinner()
+        if winner != .none || isFull() {
+            isGameOver = true
+            updateScores()
+        }
+    }
+    
+    private func updateScores() {
+        if winner == .none && isFull() {
+            scoreboard.incrementScore(for: .none)
+        } else {
+            scoreboard.incrementScore(for: winner)
+        }
+    }
+    
+    func resetGame() {
+        board = Array(repeating: Array(repeating: .empty, count: TicTacToe.boardSize), count: TicTacToe.boardSize)
+        currentPlayer = .x
+        winner = .none
+        isGameOver = false
     }
 }
