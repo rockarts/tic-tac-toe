@@ -11,14 +11,35 @@ struct ScoreboardView: View {
     @ObservedObject var scoreboard: Scoreboard
     var body: some View {
         VStack {
-            Text("Score: X \(scoreboard.xWins) wins")
-            Text("Score: O \(scoreboard.oWins) wins")
-            Text("Score: \(scoreboard.ties) ties")
+            Text("Score").font(.title2).padding(.top)
+            HStack {
+                VStack {
+                    Text("X")
+                    Text("\(scoreboard.xWins)")
+                }
+                
+                VStack {
+                    Text("O")
+                    Text("\(scoreboard.oWins)")
+                }
+                
+                VStack {
+                    Text("Tie")
+                    Text("\(scoreboard.ties)")
+                }
+            }
             Button("Reset Scores") {
                 scoreboard.resetScores()
-            }
-            .padding()
-        }
+            }.buttonStyle(.borderedProminent)
+                .tint(Color(red: 0.44, green: 0.54, blue: 0.76))
+                .padding([.leading, .trailing, .bottom])
+        }.bold()
+            .background(Color.pink.opacity(0.4))
+            .cornerRadius(15)
+            .foregroundColor(.white)
     }
 }
 
+#Preview {
+    ScoreboardView(scoreboard: Scoreboard())
+}

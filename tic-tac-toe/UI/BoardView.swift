@@ -22,24 +22,22 @@ struct BoardView: View {
                             Text("\(game.board[row][col]) ")
                                 .font(.system(size: 60))
                                 .frame(width: 100, height: 100)
-                                .background(Color.gray.opacity(0.2))
+                                .foregroundColor(Color.white)
+                                .background(Color.pink.opacity(0.4))
                                 .cornerRadius(10)
                         } else {
                             Text("")
                                 .font(.system(size: 60))
                                 .frame(width: 100, height: 100)
-                                .background(Color.gray.opacity(0.2))
+                                .foregroundColor(Color.white)
+                                .background(Color.pink.opacity(0.4))
                                 .cornerRadius(10)
                         }
                     }
                 }
             }
         }
-        
-        Button("Reset Game") {
-            game.resetGame()
-        }
-        .padding()
+        TurnView(game: game)
     }
 }
 

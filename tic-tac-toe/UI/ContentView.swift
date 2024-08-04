@@ -11,21 +11,18 @@ struct ContentView: View {
     @StateObject private var game = TicTacToe(scoreboard: Scoreboard())
     
     var body: some View {
-        ScrollView {
-            VStack {
-                ScoreboardView(scoreboard: game.scoreboard)
-                Text("Current Player: \(game.currentPlayer)")
-                    .font(.title)
-                    .padding()
-                
-                Text("Winner: \(game.winner)")
-                    .font(.title)
-                    .padding()
-                
-                BoardView(game: game)
-            }.padding()
+        ZStack {
+            Image("cherryblossom")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .edgesIgnoringSafeArea(.all)
+            ScrollView {
+                VStack {
+                    ScoreboardView(scoreboard: game.scoreboard)
+                    BoardView(game: game)
+                }.padding()
+            }
         }
-        
     }
 }
 
