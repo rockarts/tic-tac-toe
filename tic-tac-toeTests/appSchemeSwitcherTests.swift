@@ -6,6 +6,8 @@
 //
 
 import XCTest
+import SwiftUI
+
 @testable import tic_tac_toe
 
 final class AppSchemeSwitcherTests: XCTestCase {
@@ -25,5 +27,4 @@ final class AppSchemeSwitcherTests: XCTestCase {
         switcher.current = .mountains
         XCTAssertEqual(switcher.current.name, "Mountains")
     }
-    
 }

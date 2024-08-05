@@ -25,8 +25,4 @@ class AppSchemeSwitcher: ObservableObject {
             self.current = .cherryBlossom
         }
     }
-    
-    func schemeByName(_ name: String) -> AppScheme {
-        colorSchemes.first { $0.name == name } ?? .cherryBlossom
-    }
 }

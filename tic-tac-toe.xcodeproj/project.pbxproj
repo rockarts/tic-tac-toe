@@ -122,8 +122,7 @@
 				5A885FA22C5C1AD500E618AE /* tic_tac_toeApp.swift */,
 				5A885FA62C5C1AD600E618AE /* Assets.xcassets */,
 				5A885FA82C5C1AD600E618AE /* Preview Content */,
-				5A4DCF0D2C5C268F0023F4A4 /* TicTacToe.swift */,
-				5ABE23162C5DDBEB007FE3B6 /* Scoreboard.swift */,
+				5ABE232B2C612684007FE3B6 /* Models */,
 			);
 			path = "tic-tac-toe";
 			sourceTree = "<group>";
@@ -159,15 +158,24 @@
 			isa = PBXGroup;
 			children = (
 				5ABE23252C601272007FE3B6 /* AppSchemeSwitcher.swift */,
-				5A885FA42C5C1AD500E618AE /* ContentView.swift */,
 				5ABE231B2C5E8DE2007FE3B6 /* BoardView.swift */,
+				5A885FA42C5C1AD500E618AE /* ContentView.swift */,
 				5ABE23192C5E88D9007FE3B6 /* ScoreboardView.swift */,
-				5ABE231D2C5FF4D8007FE3B6 /* TurnView.swift */,
 				5ABE231F2C5FFEB2007FE3B6 /* SettingsView.swift */,
-				5ABE23212C600430007FE3B6 /* AppScheme.swift */,
 				5ABE23272C6018B3007FE3B6 /* TileView.swift */,
+				5ABE231D2C5FF4D8007FE3B6 /* TurnView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		5ABE232B2C612684007FE3B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5ABE23212C600430007FE3B6 /* AppScheme.swift */,
+				5ABE23162C5DDBEB007FE3B6 /* Scoreboard.swift */,
+				5A4DCF0D2C5C268F0023F4A4 /* TicTacToe.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
