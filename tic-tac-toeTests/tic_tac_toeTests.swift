@@ -35,8 +35,8 @@ final class tic_tac_toeTests: XCTestCase {
     func testCheckForAWinInARow() {
         let ticTacToe = TicTacToe()
         _ = ticTacToe.makeMove(at: (0,0))
-        _ = ticTacToe.makeMove(at: (1,0))
-        _ = ticTacToe.makeMove(at: (2,0))
+        _ = ticTacToe.makeMove(at: (0,1))
+        _ = ticTacToe.makeMove(at: (0,2))
         ticTacToe.printBoard()
         
         ticTacToe.checkWinner()
@@ -46,8 +46,8 @@ final class tic_tac_toeTests: XCTestCase {
     func testCheckForAWinInAColumn() {
         let ticTacToe = TicTacToe()
         _ = ticTacToe.makeMove(at: (0,0))
-        _ = ticTacToe.makeMove(at: (0,1))
-        _ = ticTacToe.makeMove(at: (0,2))
+        _ = ticTacToe.makeMove(at: (1,0))
+        _ = ticTacToe.makeMove(at: (2,0))
         ticTacToe.printBoard()
         
         ticTacToe.checkWinner()
