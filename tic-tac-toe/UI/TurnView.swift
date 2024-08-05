@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TurnView: View {
+    @Environment(\.appScheme) var appScheme
     @ObservedObject var game: TicTacToe
     
     var body: some View {
@@ -19,11 +20,11 @@ struct TurnView: View {
             Button("Reset Game") {
                 game.resetGame()
             }.buttonStyle(.borderedProminent).padding(.bottom)
-                .tint(Color(red: 0.44, green: 0.54, blue: 0.76))
+                .tint(appScheme.button)
         }.bold()
-            .background(Color.pink.opacity(0.4))
+            .background(appScheme.background)
             .cornerRadius(15)
-            .foregroundColor(.white)
+            .foregroundColor(appScheme.text)
     }
 }
 
