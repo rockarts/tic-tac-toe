@@ -24,6 +24,7 @@
 		5ABE23222C600430007FE3B6 /* AppScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE23212C600430007FE3B6 /* AppScheme.swift */; };
 		5ABE23262C601278007FE3B6 /* AppSchemeSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE23252C601272007FE3B6 /* AppSchemeSwitcher.swift */; };
 		5ABE23282C6018B3007FE3B6 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE23272C6018B3007FE3B6 /* TileView.swift */; };
+		5ABE232A2C611324007FE3B6 /* appSchemeSwitcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE23292C611324007FE3B6 /* appSchemeSwitcherTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		5ABE23212C600430007FE3B6 /* AppScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScheme.swift; sourceTree = "<group>"; };
 		5ABE23252C601272007FE3B6 /* AppSchemeSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSchemeSwitcher.swift; sourceTree = "<group>"; };
 		5ABE23272C6018B3007FE3B6 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		5ABE23292C611324007FE3B6 /* appSchemeSwitcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appSchemeSwitcherTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			children = (
 				5ABE23142C5DDBC8007FE3B6 /* scoreboardTests.swift */,
 				5A885FB32C5C1AD600E618AE /* tic_tac_toeTests.swift */,
+				5ABE23292C611324007FE3B6 /* appSchemeSwitcherTests.swift */,
 			);
 			path = "tic-tac-toeTests";
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A885FB42C5C1AD600E618AE /* tic_tac_toeTests.swift in Sources */,
+				5ABE232A2C611324007FE3B6 /* appSchemeSwitcherTests.swift in Sources */,
 				5ABE23152C5DDBD3007FE3B6 /* scoreboardTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

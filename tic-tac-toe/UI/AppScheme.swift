@@ -35,7 +35,7 @@ extension AppScheme {
     
     static let dogs = AppScheme(
         name: "Dogs",
-        background: Color("dogsBoard").opacity(0.4),
+        background: Color("dogsBoard").opacity(0.5),
         text: Color("dogsText"),
         button: Color("dogsButton"),
         backgroundImage: Image("dogs")
