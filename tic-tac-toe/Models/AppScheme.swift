@@ -17,6 +17,13 @@ struct AppScheme {
 }
 
 extension AppScheme {
+    static let bees = AppScheme(
+        name: "Bees",
+        background: Color("beesBoard").opacity(0.6),
+        text: Color("beesText"),
+        button: Color("beesButton"),
+        backgroundImage: Image("bees")
+    )
     static let cats = AppScheme(
         name: "Cats",
         background: Color("catsBoard").opacity(0.4),
@@ -82,7 +89,7 @@ extension AppScheme {
     )
 }
 
-let colorSchemes = [AppScheme.cats, AppScheme.cherryBlossom, AppScheme.dogs, AppScheme.jungle, AppScheme.mountains, AppScheme.ocean, AppScheme.scifi, AppScheme.spooky]
+let colorSchemes = [AppScheme.bees, AppScheme.cats, AppScheme.cherryBlossom, AppScheme.dogs, AppScheme.jungle, AppScheme.mountains, AppScheme.ocean, AppScheme.scifi, AppScheme.spooky]
 
 
 struct AppSchemeKey: EnvironmentKey {

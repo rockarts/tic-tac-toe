@@ -89,14 +89,7 @@ class TicTacToe: ObservableObject {
     func turn(at position: (Int, Int)) {
         guard !isGameOver && !isAIThinking && currentPlayer == .x else { return }
         
-        var successful = false
-        if currentPlayer == .o {
-            if let move = RandomAI(game: self).makeMove() {
-                successful = makeMove(at: move)
-            }
-        } else {
-            successful = makeMove(at: position)
-        }
+        let successful = makeMove(at: position)
         
         if successful {
             togglePlayer()
@@ -112,8 +105,8 @@ class TicTacToe: ObservableObject {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
             guard let self = self else { return }
-            if let move = RandomAI(game: self).makeMove() {
-                _ = self.makeMove(at: (move.1, move.0))
+            if let move = RandomAI().makeMove(board: self.board) {
+                _ = self.makeMove(at: move)
                 self.togglePlayer()
                 self.checkGameOver()
             }
@@ -124,6 +117,7 @@ class TicTacToe: ObservableObject {
     func makeMove(at position: (Int, Int)) -> Bool {
         //Check that the move is in bounds and that the space is available.
         guard board[position.0][position.1] == .empty else {
+            self.printBoard()
             print("Illegal move")
             return false
         }

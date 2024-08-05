@@ -25,6 +25,7 @@ struct BoardView: View {
                 }
             }
         }
+        
         TurnView(game: game)
     }
 }
