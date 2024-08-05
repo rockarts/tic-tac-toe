@@ -98,12 +98,12 @@ class TicTacToe: ObservableObject {
     
     func makeMove(at position: (Int, Int)) -> Bool {
         //Check that the move is in bounds and that the space is available.
-        guard board[position.1][position.0] == .empty else {
+        guard board[position.0][position.1] == .empty else {
             print("Illegal move")
             return false
         }
         
-        board[position.1][position.0] = currentPlayer
+        board[position.0][position.1] = currentPlayer
         return true
     }
     
