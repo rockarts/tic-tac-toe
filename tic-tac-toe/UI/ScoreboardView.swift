@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ScoreboardView: View {
+    @Environment(\.appScheme) var appScheme
     @ObservedObject var scoreboard: Scoreboard
     var body: some View {
         VStack {
@@ -31,12 +32,12 @@ struct ScoreboardView: View {
             Button("Reset Scores") {
                 scoreboard.resetScores()
             }.buttonStyle(.borderedProminent)
-                .tint(Color(red: 0.44, green: 0.54, blue: 0.76))
+                .tint(appScheme.button)
                 .padding([.leading, .trailing, .bottom])
         }.bold()
-            .background(Color.pink.opacity(0.4))
+            .background(appScheme.background)
             .cornerRadius(15)
-            .foregroundColor(.white)
+            .foregroundColor(appScheme.text)
     }
 }
 

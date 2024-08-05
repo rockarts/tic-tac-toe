@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct tic_tac_toeApp: App {
+    @StateObject private var schemeHolder = AppSchemeSwitcher()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-        }
+        }.environment(\.appScheme, schemeHolder.current)
+            .environmentObject(schemeHolder)
     }
 }

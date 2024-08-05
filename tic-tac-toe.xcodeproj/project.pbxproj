@@ -20,6 +20,10 @@
 		5ABE231A2C5E88D9007FE3B6 /* ScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE23192C5E88D9007FE3B6 /* ScoreboardView.swift */; };
 		5ABE231C2C5E8DE2007FE3B6 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE231B2C5E8DE2007FE3B6 /* BoardView.swift */; };
 		5ABE231E2C5FF4D8007FE3B6 /* TurnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE231D2C5FF4D8007FE3B6 /* TurnView.swift */; };
+		5ABE23202C5FFEB2007FE3B6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE231F2C5FFEB2007FE3B6 /* SettingsView.swift */; };
+		5ABE23222C600430007FE3B6 /* AppScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE23212C600430007FE3B6 /* AppScheme.swift */; };
+		5ABE23262C601278007FE3B6 /* AppSchemeSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE23252C601272007FE3B6 /* AppSchemeSwitcher.swift */; };
+		5ABE23282C6018B3007FE3B6 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE23272C6018B3007FE3B6 /* TileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		5ABE23192C5E88D9007FE3B6 /* ScoreboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardView.swift; sourceTree = "<group>"; };
 		5ABE231B2C5E8DE2007FE3B6 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		5ABE231D2C5FF4D8007FE3B6 /* TurnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnView.swift; sourceTree = "<group>"; };
+		5ABE231F2C5FFEB2007FE3B6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5ABE23212C600430007FE3B6 /* AppScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScheme.swift; sourceTree = "<group>"; };
+		5ABE23252C601272007FE3B6 /* AppSchemeSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSchemeSwitcher.swift; sourceTree = "<group>"; };
+		5ABE23272C6018B3007FE3B6 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,10 +155,14 @@
 		5ABE23182C5E88BD007FE3B6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5ABE23252C601272007FE3B6 /* AppSchemeSwitcher.swift */,
 				5A885FA42C5C1AD500E618AE /* ContentView.swift */,
 				5ABE231B2C5E8DE2007FE3B6 /* BoardView.swift */,
 				5ABE23192C5E88D9007FE3B6 /* ScoreboardView.swift */,
 				5ABE231D2C5FF4D8007FE3B6 /* TurnView.swift */,
+				5ABE231F2C5FFEB2007FE3B6 /* SettingsView.swift */,
+				5ABE23212C600430007FE3B6 /* AppScheme.swift */,
+				5ABE23272C6018B3007FE3B6 /* TileView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -285,11 +297,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ABE23282C6018B3007FE3B6 /* TileView.swift in Sources */,
+				5ABE23222C600430007FE3B6 /* AppScheme.swift in Sources */,
 				5A885FA52C5C1AD500E618AE /* ContentView.swift in Sources */,
 				5A4DCF0E2C5C268F0023F4A4 /* TicTacToe.swift in Sources */,
+				5ABE23202C5FFEB2007FE3B6 /* SettingsView.swift in Sources */,
 				5ABE23172C5DDBF6007FE3B6 /* Scoreboard.swift in Sources */,
 				5ABE231C2C5E8DE2007FE3B6 /* BoardView.swift in Sources */,
 				5ABE231E2C5FF4D8007FE3B6 /* TurnView.swift in Sources */,
+				5ABE23262C601278007FE3B6 /* AppSchemeSwitcher.swift in Sources */,
 				5ABE231A2C5E88D9007FE3B6 /* ScoreboardView.swift in Sources */,
 				5A885FA32C5C1AD500E618AE /* tic_tac_toeApp.swift in Sources */,
 			);
