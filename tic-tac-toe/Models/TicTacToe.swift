@@ -37,8 +37,8 @@ class TicTacToe: ObservableObject {
     @Published var currentPlayer: State = .x
     @Published var winner: Winner = .none
     @Published var isGameOver: Bool = false
-    
     @Published var scoreboard: Scoreboard
+    @Published var isAIThinking: Bool = false
     
     init(scoreboard: Scoreboard = Scoreboard()) {
         self.scoreboard = scoreboard
@@ -87,12 +87,37 @@ class TicTacToe: ObservableObject {
     }
     
     func turn(at position: (Int, Int)) {
-        guard !isGameOver else { return }
+        guard !isGameOver && !isAIThinking && currentPlayer == .x else { return }
         
-        let successful = makeMove(at: position)
+        var successful = false
+        if currentPlayer == .o {
+            if let move = RandomAI(game: self).makeMove() {
+                successful = makeMove(at: move)
+            }
+        } else {
+            successful = makeMove(at: position)
+        }
+        
         if successful {
             togglePlayer()
             checkGameOver()
+            makeAIMove()
+        }
+    }
+    
+    func makeAIMove() {
+        guard currentPlayer == .o && !isGameOver && !isAIThinking else { return }
+        
+        isAIThinking = true
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+            guard let self = self else { return }
+            if let move = RandomAI(game: self).makeMove() {
+                _ = self.makeMove(at: (move.1, move.0))
+                self.togglePlayer()
+                self.checkGameOver()
+            }
+            self.isAIThinking = false
         }
     }
     

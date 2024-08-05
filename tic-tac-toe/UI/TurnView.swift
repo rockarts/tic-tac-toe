@@ -13,8 +13,16 @@ struct TurnView: View {
     
     var body: some View {
         VStack {
-            Text("Current Player: \(game.currentPlayer)")
-                .font(.title3).padding([.leading, .top, .trailing])
+            if game.isAIThinking {
+                Text("AI is thinking...")
+                    .font(.title3)
+                    .padding()
+            } else {
+                Text("Current Player: \(game.currentPlayer)")
+                    .font(.title3)
+                    .padding([.leading, .top, .trailing])
+            }
+            
             Text("Winner: \(game.winner)")
                 .font(.title3)
             Button("Reset Game") {

@@ -21,6 +21,7 @@ struct BoardView: View {
                     }) {
                         game.board[row][col] != .empty ? TileView(text: "\(game.board[row][col])") : TileView(text: "")
                     }
+                    .disabled(game.currentPlayer == .o || game.isAIThinking || game.isGameOver)
                 }
             }
         }
