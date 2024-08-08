@@ -15,6 +15,12 @@
 		5A885FB42C5C1AD600E618AE /* tic_tac_toeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A885FB32C5C1AD600E618AE /* tic_tac_toeTests.swift */; };
 		5A885FBE2C5C1AD600E618AE /* tic_tac_toeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A885FBD2C5C1AD600E618AE /* tic_tac_toeUITests.swift */; };
 		5A885FC02C5C1AD600E618AE /* tic_tac_toeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A885FBF2C5C1AD600E618AE /* tic_tac_toeUITestsLaunchTests.swift */; };
+		5AAD16FE2C615AFC0024EA0A /* RandomAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD16FD2C615AFC0024EA0A /* RandomAI.swift */; };
+		5AAD17002C615DFE0024EA0A /* RandomAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD16FF2C615DFE0024EA0A /* RandomAITests.swift */; };
+		5AAD17392C619B360024EA0A /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD17382C619B360024EA0A /* GameMode.swift */; };
+		5AAD173B2C619BC90024EA0A /* Winner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD173A2C619BC90024EA0A /* Winner.swift */; };
+		5AAD173D2C619BE70024EA0A /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD173C2C619BE70024EA0A /* State.swift */; };
+		5AAD173F2C625B470024EA0A /* MinimaxAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD173E2C625B470024EA0A /* MinimaxAI.swift */; };
 		5ABE23152C5DDBD3007FE3B6 /* scoreboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE23142C5DDBC8007FE3B6 /* scoreboardTests.swift */; };
 		5ABE23172C5DDBF6007FE3B6 /* Scoreboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE23162C5DDBEB007FE3B6 /* Scoreboard.swift */; };
 		5ABE231A2C5E88D9007FE3B6 /* ScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE23192C5E88D9007FE3B6 /* ScoreboardView.swift */; };
@@ -57,6 +63,12 @@
 		5A885FBD2C5C1AD600E618AE /* tic_tac_toeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tic_tac_toeUITests.swift; sourceTree = "<group>"; };
 		5A885FBF2C5C1AD600E618AE /* tic_tac_toeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tic_tac_toeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5A885FCC2C5C1EBE00E618AE /* tic-tac-toe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "tic-tac-toe.entitlements"; sourceTree = "<group>"; };
+		5AAD16FD2C615AFC0024EA0A /* RandomAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAI.swift; sourceTree = "<group>"; };
+		5AAD16FF2C615DFE0024EA0A /* RandomAITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAITests.swift; sourceTree = "<group>"; };
+		5AAD17382C619B360024EA0A /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
+		5AAD173A2C619BC90024EA0A /* Winner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Winner.swift; sourceTree = "<group>"; };
+		5AAD173C2C619BE70024EA0A /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		5AAD173E2C625B470024EA0A /* MinimaxAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimaxAI.swift; sourceTree = "<group>"; };
 		5ABE23142C5DDBC8007FE3B6 /* scoreboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scoreboardTests.swift; sourceTree = "<group>"; };
 		5ABE23162C5DDBEB007FE3B6 /* Scoreboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scoreboard.swift; sourceTree = "<group>"; };
 		5ABE23192C5E88D9007FE3B6 /* ScoreboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardView.swift; sourceTree = "<group>"; };
@@ -141,6 +153,7 @@
 				5ABE23142C5DDBC8007FE3B6 /* scoreboardTests.swift */,
 				5A885FB32C5C1AD600E618AE /* tic_tac_toeTests.swift */,
 				5ABE23292C611324007FE3B6 /* appSchemeSwitcherTests.swift */,
+				5AAD16FF2C615DFE0024EA0A /* RandomAITests.swift */,
 			);
 			path = "tic-tac-toeTests";
 			sourceTree = "<group>";
@@ -174,6 +187,11 @@
 				5ABE23212C600430007FE3B6 /* AppScheme.swift */,
 				5ABE23162C5DDBEB007FE3B6 /* Scoreboard.swift */,
 				5A4DCF0D2C5C268F0023F4A4 /* TicTacToe.swift */,
+				5AAD16FD2C615AFC0024EA0A /* RandomAI.swift */,
+				5AAD17382C619B360024EA0A /* GameMode.swift */,
+				5AAD173A2C619BC90024EA0A /* Winner.swift */,
+				5AAD173C2C619BE70024EA0A /* State.swift */,
+				5AAD173E2C625B470024EA0A /* MinimaxAI.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -308,14 +326,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AAD16FE2C615AFC0024EA0A /* RandomAI.swift in Sources */,
 				5ABE23282C6018B3007FE3B6 /* TileView.swift in Sources */,
 				5ABE23222C600430007FE3B6 /* AppScheme.swift in Sources */,
 				5A885FA52C5C1AD500E618AE /* ContentView.swift in Sources */,
 				5A4DCF0E2C5C268F0023F4A4 /* TicTacToe.swift in Sources */,
+				5AAD17392C619B360024EA0A /* GameMode.swift in Sources */,
 				5ABE23202C5FFEB2007FE3B6 /* SettingsView.swift in Sources */,
+				5AAD173F2C625B470024EA0A /* MinimaxAI.swift in Sources */,
 				5ABE23172C5DDBF6007FE3B6 /* Scoreboard.swift in Sources */,
+				5AAD173D2C619BE70024EA0A /* State.swift in Sources */,
 				5ABE231C2C5E8DE2007FE3B6 /* BoardView.swift in Sources */,
 				5ABE231E2C5FF4D8007FE3B6 /* TurnView.swift in Sources */,
+				5AAD173B2C619BC90024EA0A /* Winner.swift in Sources */,
 				5ABE23262C601278007FE3B6 /* AppSchemeSwitcher.swift in Sources */,
 				5ABE231A2C5E88D9007FE3B6 /* ScoreboardView.swift in Sources */,
 				5A885FA32C5C1AD500E618AE /* tic_tac_toeApp.swift in Sources */,
@@ -326,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AAD17002C615DFE0024EA0A /* RandomAITests.swift in Sources */,
 				5A885FB42C5C1AD600E618AE /* tic_tac_toeTests.swift in Sources */,
 				5ABE232A2C611324007FE3B6 /* appSchemeSwitcherTests.swift in Sources */,
 				5ABE23152C5DDBD3007FE3B6 /* scoreboardTests.swift in Sources */,
