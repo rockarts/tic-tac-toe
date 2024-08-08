@@ -7,30 +7,6 @@
 
 import Foundation
 
-enum State {
-    case empty, x , o
-    
-    var description: String {
-        switch self {
-        case .empty: return ""
-        case .x: return "X"
-        case .o: return "O"
-        }
-    }
-}
-
-enum Winner: Int {
-    case none, x, o
-    
-    var description: String {
-        switch self {
-        case .none: return ""
-        case .x: return "X"
-        case .o: return "O"
-        }
-    }
-}
-
 class TicTacToe: ObservableObject {
     static let boardSize = 3
     @Published var board: [[State]] = Array(repeating: Array(repeating: .empty, count: boardSize), count: boardSize)
@@ -39,16 +15,17 @@ class TicTacToe: ObservableObject {
     @Published var isGameOver: Bool = false
     @Published var scoreboard: Scoreboard
     @Published var isAIThinking: Bool = false
+    @Published var gameMode: GameMode = .localMultiplayer
+    
     
     init(scoreboard: Scoreboard = Scoreboard()) {
         self.scoreboard = scoreboard
     }
     
-    private static let lines: [[Int]] = {
+    static let lines: [[Int]] = {
         let size = boardSize
         var lines: [[Int]] = []
-        
-        // Rows
+
         for i in 0..<size {
             lines.append((0..<size).map { j -> Int in i * size + j })
         }
@@ -82,7 +59,7 @@ class TicTacToe: ObservableObject {
                 case .o: return "O"
                 }
             }.joined(separator: " ")
-            print(rowString)
+            debugPrint(rowString)
         }
     }
     
@@ -98,22 +75,6 @@ class TicTacToe: ObservableObject {
         }
     }
     
-    func makeAIMove() {
-        guard currentPlayer == .o && !isGameOver && !isAIThinking else { return }
-        
-        isAIThinking = true
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-            guard let self = self else { return }
-            if let move = RandomAI().makeMove(board: self.board) {
-                _ = self.makeMove(at: move)
-                self.togglePlayer()
-                self.checkGameOver()
-            }
-            self.isAIThinking = false
-        }
-    }
-    
     func makeMove(at position: (Int, Int)) -> Bool {
         //Check that the move is in bounds and that the space is available.
         guard board[position.0][position.1] == .empty else {
@@ -125,6 +86,25 @@ class TicTacToe: ObservableObject {
         board[position.0][position.1] = currentPlayer
         return true
     }
+    
+    func makeAIMove() {
+        guard currentPlayer == .o && !isGameOver && !isAIThinking else { return }
+        
+        isAIThinking = true
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+            guard let self = self else { return }
+            if let move = MinimaxAI(game: self).bestMove() {
+            //if let move = RandomAI().makeMove(board: self.board) {
+                _ = self.makeMove(at: move)
+                self.togglePlayer()
+                self.checkGameOver()
+            }
+            self.isAIThinking = false
+        }
+    }
+    
+    
     
     func togglePlayer() {
         currentPlayer = currentPlayer == .x ? .o : .x
@@ -171,3 +151,4 @@ class TicTacToe: ObservableObject {
         isGameOver = false
     }
 }
+

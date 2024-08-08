@@ -12,8 +12,8 @@ final class RandomAITests: XCTestCase {
 
     func testMakeMove() throws {
         let game = TicTacToe()
-        let ai = RandomAI(game: game)
-        let move = ai.makeMove()!
+        let ai = RandomAI()
+        let move = ai.makeMove(board: game.board)!
         XCTAssert(move.0 >= 0 && move.0 <= 2)
         XCTAssert(move.1 >= 0 && move.1 <= 2)
     }

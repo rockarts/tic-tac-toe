@@ -22,7 +22,6 @@ class RandomAI {
         
         if !emptySpots.isEmpty {
             let random = emptySpots.randomElement()!
-            dump(emptySpots)
             debugPrint("AI determined to move at \(random.0), \(random.1)")
             return random
         }
